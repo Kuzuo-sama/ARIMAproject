@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    image: arima-project:latest
+    environment:
+      DISPLAY: :99
+    expose:
+      - "6080"
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
